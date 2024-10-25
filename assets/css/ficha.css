@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    font-family: "Merienda", cursive;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+section {
+    min-height: 2350px;
+    width: 1150px;
+    background-color: white;
+    margin: auto;
+    padding: 25px;
+}
+
+input {
+    background-color: rgb(220, 255, 255);
+    line-height: 40px;
+    font-size: 32px;
+    border-radius: 8px;
+    font-family: "Merienda", cursive;
+    border: solid 3px black;
+    text-align: center;
+}
+
+select {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(220, 255, 255);
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    font-family: "Merienda", cursive;
+    border: solid 3px black;
+    text-align: center;
+}
+
+textarea {
+    background-color: rgb(220, 255, 255);
+    height: 160px;
+    font-size: 27px;
+    border-radius: 8px;
+    font-family: "Merienda", cursive;
+    border: solid 3px black;
+    text-align: center;
+    resize: none;
+}
+
+.b-b {
+    padding-bottom: 5px;
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+.flex-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecario {
+    text-align: center;
+}
+.cabecario input {
+    font-size: 29px;
+}
+
+.cab-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cab-1 div {
+    width: 50%;
+}
+
+.genero {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.genero div {
+    width: 100px;
+}
+
+.genero input {
+    height: 30px;
+    width: 30px;
+    margin: 0;
+}
+
+.genero i {
+    font-size: 60px;
+}
+
+.cab-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    width: 1150px;
+}
+
+.cab-2 .flex-inputs {
+    width: 356px;
+}
+
+/* ========== ATRIBUTOS ========== */
+.atributos-container {
+    margin-top: 30px;
+}
+
+.atributo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.main-atb {
+    text-align: center;
+}
+
+.main-atb input {
+    line-height: 150px;
+    width: 200px;
+    font-size: 100px;
+}
+
+.sec-atb-container {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.sec-atb {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sec-atb label {
+    text-decoration: underline;
+}
+
+.sec-atb-inputs {
+    display: flex;
+    gap: 15px;
+}
+
+.sec-atb-inputs input {
+    height: 30px;
+    font-size: 28px;
+}
+
+.sec-atb-inputs div {
+    display: flex;
+    gap: 10px;
+}
+
+.sec-atb-inputs div input {
+    width: 80px;
+
+}
+
+/* ========== PERKS ========== */
+
+.perks {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2px;
+}
+
+.perks div {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+
+/* ========== Vida e Equilibrio ========== */
+
+.life-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.life-container div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 49%;
+}
+
+/* ========== MAGIAS ========== */
+.magias {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.magias div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+
+/* ========== ITENS ========== */
+.itens-container {
+    display: flex;
+    margin-top: 40px;
+}
+
+.itens-mini-container {
+    width: 50%;
+}
+
+.itens-text {
+    position: relative;
+}
+
+.itens-text h2 {
+    display: block;
+    margin: 0;
+    font-size: 36px;
+    margin-left: 85px;
+}
+
+.itens-text div {
+    width: 179px;
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    right: 0px;
+    bottom: -10px;
+}
+
+.itens-text span {
+    text-align: center;
+    font-size: 23px;
+    width: 55px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+.item input{
+    width: 378px;
+}
+
+.itens-variants {
+    display: flex;
+    gap: 5px;
+}
+
+.itens-variants input {
+    width: 45px;
+    font-size: 26px;
+}
