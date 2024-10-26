@@ -18,11 +18,10 @@ if (isset($_POST['submit'])) {
     <section class="container">
         <div class="main">
             <h2>Loga baixinho pros cria</h2>
-
             <form method="post">
                 <div class="inputs">
                     <div>
-                        <label for="name">Só crica ai</label>
+                        <label for="name">Favor selecionar seu vulgo</label>
                         <select name="name" id="name" onclick="getNames(this)">
                             <option value=""></option>
                             <?php
@@ -35,12 +34,9 @@ if (isset($_POST['submit'])) {
                 </div>
                 <button type="submit" name="submit">Logar</button>
             </form>
-            <span class="click-here">Para criar uma ficha <a href="Create.php">Clique aqui.</a></span>
+            <span class="click-here">Para criar uma ficha <a href="/create">Clique aqui.</a></span>
         </div>
-
     </section>
-
-    <script src="../assets/js/login.js"></script>
 </body>
 
 </html>

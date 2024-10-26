@@ -13,9 +13,6 @@ function login($name)
             session_start();
         }
         $_SESSION['user_id'] = $user_id;
-        $ficha_id = getFichaId($user_id);
-        $_SESSION['ficha_id'] = $ficha_id;
-
-        header("Location: /bruxinha/view/Ficha.php");
+        header("Location: /ficha");
     }
 }

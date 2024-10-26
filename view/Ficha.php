@@ -4,6 +4,9 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 $fichaData = compilateFichaData();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: /login");
+}
 extract($fichaData);
 
 ?>
@@ -20,8 +23,9 @@ extract($fichaData);
 </head>
 
 <body>
-    <a href="../controller/Logout.php">Deslogar</a>
+    <a href="/logout">Deslogar</a>
     <section>
+        <input type="hidden" id="ficha_id" value="<?= $id; ?>">
         <form class="cabecario" id="cabecario">
             <div class="cab-1">
                 <div class="flex-inputs">
@@ -279,7 +283,7 @@ extract($fichaData);
                 <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[13]) ? "<option value='{$perks[13]['code_name']}'>{$perks[13]['name']}</option>" : ''; ?></select>
                 <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[14]) ? "<option value='{$perks[14]['code_name']}'>{$perks[14]['name']}</option>" : ''; ?></select>
             </div>
-            <textarea id="prk_desc" disabled><?= isset($perks[0]) ? $perks[0]['description'] : ''; ?></textarea>
+            <textarea id="prk_desc" disabled><?= isset($perks[0]) ? $perks[0]['name'] . ': ' . $perks[0]['description'] : ''; ?></textarea>
         </form>
 
         <form class="life-container" id="life_container">

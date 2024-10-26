@@ -1,14 +1,17 @@
-RewriteEngine Off
+Options -Indexes
 
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-l
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-l
+RewriteEngine On
 
+#RewriteRule ^(.+)$ login.php?url=$1 [QSA,L]
 
-RewriteRule ^(.+)$ login.php?url=$1 [QSA,L]
+RewriteRule ^$ ./view/Login.php [L]
 
-#RewriteRule ^HomeController$ ./app/Sts/Controllers/HomeController.php [L]
-
-
-# Options -Indexes
+RewriteRule ^login$ ./view/Login.php [L]
+RewriteRule ^create$ ./view/Create.php [L]
+RewriteRule ^ficha$ ./view/Ficha.php [L]
+RewriteRule ^logout$ ./controller/Logout.php [L]
+#RewriteRule ^api/armas$ ./controller/ArmasController.php [L]

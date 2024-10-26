@@ -16,19 +16,18 @@ if (isset($_POST['submit'])) {
 
 <body>
     <section class="container">
-        <div class="main">
+        <div class="main main2">
             <h2 style="font-size: 25px;">Faz a ficha lentinho pros cria</h2>
-
             <form method="post">
                 <div class="inputs">
                     <div>
-                        <label for="username">Só botar o nome</label>
+                        <label for="username">Só escrever o nome</label>
                         <input type="text" name="username" id="username">
                     </div>
                 </div>
                 <button name="submit">Criar</button>
             </form>
-            <span class="click-here">Para voltar pro login <a href="Login.php">Clique aqui.</a></span>
+            <span class="click-here">Para voltar pro login <a href="login">Clique aqui.</a></span>
         </div>
 
     </section>

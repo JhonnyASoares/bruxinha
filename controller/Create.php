@@ -17,11 +17,10 @@ function createUserFicha($name)
     for ($i = 1; $i < 6; $i++) {
         createMagic($i, $ficha_id);
     }
-
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
     }
     $_SESSION['user_id'] = $user_id;
-    $_SESSION['ficha_id'] = $ficha_id;
-    header("Location: /bruxinha/view/Ficha.php");
+
+    header("Location: /ficha");
 }

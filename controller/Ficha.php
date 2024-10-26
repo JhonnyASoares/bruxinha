@@ -14,7 +14,7 @@ if (isset($_POST['item'])) {
     upItens();
 }
 if (isset($_POST['name'])) {
-    updateCab($_SESSION['ficha_id'], $_POST['name'], $_POST['genero'], $_POST['etinia'], $_POST['origem'], $_POST['antecedentes'], $_POST['classe'], $_POST['arcana'], $_POST['implemento']);
+    updateCab($_POST['ficha_id'], $_POST['name'], $_POST['genero'], $_POST['etinia'], $_POST['origem'], $_POST['antecedentes'], $_POST['classe'], $_POST['arcana'], $_POST['implemento']);
 }
 if (isset($_POST['vital'])) {
     upAtribute();
@@ -26,7 +26,7 @@ if (isset($_POST['magia'])) {
     upMagic();
 }
 if (isset($_POST['vida'])) {
-    updateLifeEqu($_SESSION['ficha_id'], $_POST['vida'], $_POST['equilibrio']);
+    updateLifeEqu($_POST['ficha_id'], $_POST['vida'], $_POST['equilibrio']);
 }
 
 function upItens()
@@ -40,25 +40,27 @@ function upItens()
         if ($peso == null) {
             $peso = 0;
         }
-        updateItens($_SESSION['ficha_id'], $key + 1, $name, $qtd, $peso);
+        $qtd *= 10;
+        $peso *= 10;
+        updateItens($_POST['ficha_id'], $key + 1, $name, $qtd, $peso);
     }
 }
 function upAtribute()
 {
     foreach ($_POST as $column => $name) {
-        updateAtributes($_SESSION['ficha_id'], $column, $name);
+        updateAtributes($_POST['ficha_id'], $column, $name);
     }
 }
 function upPerkLink()
 {
     foreach ($_POST['prk'] as $prkSlot => $codeName) {
         $prkId = getPerkId($codeName);
-        updatePerkLink($_SESSION['ficha_id'], $prkId, $prkSlot + 1);
+        updatePerkLink($_POST['ficha_id'], $prkId, $prkSlot + 1);
     }
 }
 function upMagic()
 {
     foreach ($_POST['magia'] as $magicSlot => $desc) {
-        updateMagic($_SESSION['ficha_id'], $magicSlot + 1, $desc);
+        updateMagic($_POST['ficha_id'], $magicSlot + 1, $desc);
     }
 }

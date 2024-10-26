@@ -22,6 +22,9 @@ background-color: black;
     padding: 5px;
     border-radius: 10px;
 }
+.main2 {
+    background-color: rgb(192, 255, 192);
+}
 
 h2 {
     font-family: cursive;

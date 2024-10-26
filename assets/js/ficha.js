@@ -1,4 +1,4 @@
-const controllerUrl = '../'
+const controllerUrl = './controller/Ficha.php'
 document.addEventListener('DOMContentLoaded', function () {
 
     let atrVital = document.getElementById('vital')
@@ -77,7 +77,6 @@ async function getPerkList() {
     });
     const data = await response.json(); // converte a resposta para JSON
     return data;
-
 }
 
 async function perkDescription(perkValue) {
@@ -88,7 +87,7 @@ async function perkDescription(perkValue) {
     } else {
         for (let perk of perkList) {
             if (perkValue == perk.code_name) {
-                textarea.innerHTML = perk.description
+                textarea.innerHTML = perk.name + ': ' + perk.description
             }
         }
     }
@@ -140,6 +139,8 @@ function addTextareaEvent(formId) {
 
 function saveData(formId) {
     let formEdit = new FormData(document.getElementById(formId.id))
+    let fichaId = document.getElementById('ficha_id')
+    formEdit.append('ficha_id', fichaId.value)
     fetch(controllerUrl, {
         method: "POST",
         body: formEdit
