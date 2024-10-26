@@ -48,6 +48,9 @@ function upItens()
 function upAtribute()
 {
     foreach ($_POST as $column => $name) {
+        if ($name == null) {
+            $name = 0;
+        }
         updateAtributes($_POST['ficha_id'], $column, $name);
     }
 }

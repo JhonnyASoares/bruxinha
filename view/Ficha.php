@@ -267,23 +267,11 @@ extract($fichaData);
         <form class="perks" id="perks">
             <label>Perks</label>
             <div>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[0]) ? "<option value='{$perks[0]['code_name']}'>{$perks[0]['name']}</option>" : ''; ?> </select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[1]) ? "<option value='{$perks[1]['code_name']}'>{$perks[1]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[2]) ? "<option value='{$perks[2]['code_name']}'>{$perks[2]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[3]) ? "<option value='{$perks[3]['code_name']}'>{$perks[3]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[4]) ? "<option value='{$perks[4]['code_name']}'>{$perks[4]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[5]) ? "<option value='{$perks[5]['code_name']}'>{$perks[5]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[6]) ? "<option value='{$perks[6]['code_name']}'>{$perks[6]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[7]) ? "<option value='{$perks[7]['code_name']}'>{$perks[7]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[8]) ? "<option value='{$perks[8]['code_name']}'>{$perks[8]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[9]) ? "<option value='{$perks[9]['code_name']}'>{$perks[9]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[10]) ? "<option value='{$perks[10]['code_name']}'>{$perks[10]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[11]) ? "<option value='{$perks[11]['code_name']}'>{$perks[11]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[12]) ? "<option value='{$perks[12]['code_name']}'>{$perks[12]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[13]) ? "<option value='{$perks[13]['code_name']}'>{$perks[13]['name']}</option>" : ''; ?></select>
-                <select name="prk[]" onclick="callPerks(this)"><?= isset($perks[14]) ? "<option value='{$perks[14]['code_name']}'>{$perks[14]['name']}</option>" : ''; ?></select>
+                <select name="prk[]" id="prk_1" onclick="callPerks(this)"><?= isset($perks[0]) ? "<option value='{$perks[0]['code_name']}'>{$perks[0]['name']}</option>" : ''; ?> </select>
+                <select name="prk[]" id="prk_2" onclick="callPerks(this)"><?= isset($perks[1]) ? "<option value='{$perks[1]['code_name']}'>{$perks[1]['name']}</option>" : ''; ?></select>
             </div>
-            <textarea id="prk_desc" disabled><?= isset($perks[0]) ? $perks[0]['name'] . ': ' . $perks[0]['description'] : ''; ?></textarea>
+            <textarea id="prk_desc_1" disabled><?= isset($perks[0]) ? $perks[0]['name'] . ': ' . $perks[0]['description'] : ''; ?></textarea>
+            <textarea id="prk_desc_2" disabled><?= isset($perks[1]) ? $perks[1]['name'] . ': ' . $perks[1]['description'] : ''; ?></textarea>
         </form>
 
         <form class="life-container" id="life_container">

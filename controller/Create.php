@@ -11,7 +11,7 @@ function createUserFicha($name)
     for ($i = 1; $i < 19; $i++) {
         createItem($i, $ficha_id);
     }
-    for ($i = 1; $i < 16; $i++) {
+    for ($i = 1; $i < 3; $i++) {
         createPerkLink($i, $ficha_id);
     }
     for ($i = 1; $i < 6; $i++) {

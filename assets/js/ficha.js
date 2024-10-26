@@ -66,7 +66,12 @@ async function callPerks(select) {
         }
         select.innerHTML = options
     }
-    perkDescription(select.value)
+    if (select.id == "prk_1") {
+        perkDescription(select.value, 'prk_desc_1')
+    }
+    if (select.id == "prk_2") {
+        perkDescription(select.value, 'prk_desc_2')
+    }
 }
 async function getPerkList() {
 
@@ -79,8 +84,8 @@ async function getPerkList() {
     return data;
 }
 
-async function perkDescription(perkValue) {
-    let textarea = document.getElementById("prk_desc")
+async function perkDescription(perkValue, textareaId) {
+    let textarea = document.getElementById(textareaId)
     let perkList = await getPerkList()
     if (perkValue == "") {
         textarea.innerHTML = ''
